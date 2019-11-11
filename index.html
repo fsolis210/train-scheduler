@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Train Tracker</title>
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="/assets/css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/style.css" /> 
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- Firebase Reference -->
+    <script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
+    <!-- Moment.js Reference -->
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+  </head>
+  
+  <body>
+
+  <div class="container">
+    
+    <div class="jumbotron">
+      <h1>Train Schedule</h1>
+      <h2>Choo Choo time!</h2>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-12">
+      
+      <!-- Train board -->
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <h3 class="panel-title">Train Schedule</h3>
+        </div>
+        
+        <div class="panel-body">
+          <table class="table table-hover" id='train-table'>
+                <thead>
+                  <tr>
+                    <th>Train</th>
+                    <th>Destination</th>
+                    <th>Platform</th>
+                    <th>First Train</th>
+                    <th>Frequency (in minutes)</th>
+                    <th>Next Arrival</th>
+                    <th>Minutes Away</th>
+                  </tr>
+                </thead>
+                
+                <tbody>
+                </tbody>
+          </table>
+        </div>
+      </div>   
+      
+    <!-- Adding a Train   -->
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+          <h3 class="panel-title">Add a Train</h3>
+        </div>
+        <div class="panel-body">
+        <!-- Entry form -->
+        <form>
+          <div class="form-group">
+            <label for="train-input">Train</label>
+            <input class="form-control" id="train-input" type="text">
+          </div>
+
+          <div class="form-group">
+            <label for="destination-input">Destination</label>
+            <input class="form-control" id="destination-input" type="text">
+          </div>
+          
+          <div class="form-group">
+            <label for="platform-input">Platform</label>
+            <input class="form-control" id="platform-input" type="text">
+          </div>
+
+          <div class="form-group">
+            <label for="first-train-input">First Train Time</label>
+            <input class="form-control" id="first-train-input" type="text">
+          </div>
+
+          <div class="form-group">
+            <label for="frequency-input">Frequency</label>
+            <input class="form-control" id="frequency-input" type="text">
+          </div>
+
+          <button class="btn btn-primary" id="add-train-btn" type="submit">Submit</button>
+
+          </form>
+
+        </div>
+      </div>
+    </div>
+  </div> 
+
+
+  <!-- Loading in the jQuery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!-- Link to my js file -->
+    <script type="text/javascript" src="/assets/javascript/app.js"></script>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="/__/firebase/7.3.0/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="/__/firebase/7.3.0/firebase-analytics.js"></script>
+
+<!-- Initialize Firebase -->
+<script src="/__/firebase/init.js"></script>
+  </body>
+  </html>
